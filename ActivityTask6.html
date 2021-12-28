@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Task 6</title>
+</head>
+
+<body>
+
+  <script>
+    /**
+  Task 1: Simple Programs todo for variables
+  (  Declare four variables without assigning values and print them in console )
+    */
+    var a;
+    var b;
+    var c;
+    var d;
+    console.log(a);  //undefined  
+    console.log(b);  //undefined 
+    console.log(c);  //undefined 
+    console.log(d);  //undefined 
+
+    /**
+     * How to get value of the variable myvar as output
+         var myvar= 1;
+        console.log("myvar");
+     * */
+
+    var myvar = 1;
+    console.log(`${myvar}`);
+
+    /**
+     ( Declare variables to store your first name, last name, marital status, country and age in multiple lines )
+    * */
+    var firstName = "Mohan";
+    var lastName = "Rao";
+    var maritalStatus = false;
+    var country = "india";
+    var age = 23;
+    console.log(`${firstName} ${lastName} ${maritalStatus} ${country} ${age}`);
+    /**
+     ( Declare variables to store your first name, last name, marital status, country and age in single lines )
+    * */
+
+    var firstName = "Sanjay", lastName = "Kumar", maritalStatus = false, country = "india", age = 23;
+    console.log(`${firstName} ${lastName} ${maritalStatus} ${country} ${age}`);
+
+    /**
+   ( Declare variables and assign string, boolean, undefined and null data types )
+  * */
+
+    var str = "Hi folks!...";
+    var boo = true;
+    var unde;
+    var nothing = null;
+    console.log(`${str} ${boo} ${unde} ${nothing}`);
+
+    /**
+     ( Convert the string to integer )
+       parseInt, Number, plus sign(+)
+    * */
+    var num1 = "10";
+    num1 = parseInt(num1);
+    var num2 = "11";
+    num2 = Number(num2);
+    var num3 = "12";
+    num3 = +num3
+    console.log(`${num1} ${typeof (num1)}`);
+    console.log(`${num2} ${typeof (num2)}`);
+    console.log(`${num3} ${typeof (num3)}`);
+
+    /**
+      Write 6 statement which provide truthy & falsey values.
+    * */
+    // 0 is an falsey value
+    if (1) {
+      console.log("I am 1 executed");
+    }
+
+    if (0 && null && undefined) {
+
+    }
+    else {
+      console.log("I am 0 not executed because it return falsey value");
+    }
+
+
+    if ("0") {
+      console.log("I am zero with string datatype therefore i am truley value");
+    }
+    if ([] && {}) {
+      console.log("I am empty Array and objects therefore i am truley value");
+    }
+
+
+    /****
+******    Task 2: Simple Programs todo for Operators
+( Square of a number )
+*** * */
+    var numm1 = 5;
+    //   normal Method
+    var res1 = numm1 * numm1;
+    console.log(`Square of an number ${numm1} is : ${res1}`);
+    // Using Math function
+    var res2 = Math.pow(numm1, 2);
+    console.log(`Square of an number ${numm1} is : ${res2}`);
+    var res3 = Math.pow(numm1, 3);
+    console.log(`Thrice of an number ${numm1} is : ${res3}`);
+
+    /**
+     * Swapping 2 numbers
+     * **/
+    var numberOne = 45;
+    var numberTwo = 12;
+    var temp;
+    console.log(`Before swapping the numbers is a:${numberOne} b: ${numberTwo}`);
+    temp = numberOne;
+    numberOne = numberTwo;
+    numberTwo = temp;
+    console.log(`After swapping the numbers is a:${numberOne} b: ${numberTwo}`);
+
+    /**
+     * Power of any number x ^ y.
+     * 
+     * **/
+    var xValue = 10;
+    var yValue = 5;
+    var resValue = Math.pow(xValue, yValue);
+    console.log(resValue);
+
+
+    /**
+     *   Task file link : https://medium.com/@reach2arunprakash/guvi-zen-class-find-the-culprits-and-nail-them-9ee6c67c44fb
+     * 
+     *  */
+
+    //  1. alert( “I’m JavaScript!’); --> Whats the error in this ?
+    alert("I am javascript");
+             // error-reason : Whichever quotes we open should be enclosed by same quotes..
+
+
+    /**
+     * alert("I'm JavaScript!");
+alert('Hello') // this line is not having semicolon
+alert(`Wor
+ld`)
+alert(3 +
+1
++ 2); // this is multiple line code and its working
+     *  */
+     alert("I'm JavaScript!");
+alert('Hello') 
+alert(`Wor
+ ld`)
+alert(3 +
+1
++ 2); 
+
+// Error- reason : All lines are executed  using Interpolation (``) -> it retains the structure of code whatever we type. Semicolon is automatically executed.
+// For E.G :  alert(`mo
+//                    ha
+//                    n`);  
+// ===> O/P
+// mo
+// ha
+// n
+
+
+
+/**
+ * 3. let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+lname;
+alert( admin ); // "Guvi geek"
+ * 
+ * */
+ let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+" "+lname;
+alert( admin ); // "Guvi geek"
+alert(`Hello ${admin}`);
+
+
+/** Question: 4
+ * let a = prompt("First number?");
+let b = prompt("Second number?");
+alert(a + b);
+ * 
+ * */
+ let a1 = prompt("First number?");
+let b1 = prompt("Second number?");
+alert(a1 + b1);
+
+// output will be like if a=10, b=20  ==> 1020
+// Because both variable value taken as string and converts to string
+//   To avoid this convert into numbers do the operation
+a1 = parseInt(a1);
+b1 = parseInt(b1);
+console.log(`Addition of two numbers is: ${a1+b1}`);
+alert(`${a1+b1}`);
+
+
+/** Question:-
+ * If you run the below scritpt you will get “Code is Blasted”
+Explain Why the Code is blasted and how to diffuse it and get “Diffused”.
+ *   var a = "2" > "12";
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+ * 
+ * */
+
+ var a = "2" > "12";
+//Don't touch below this
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+// for e.G:
+
+var bs = "2" > "45";
+if (bs) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+
+//  REASON: Beacuse it checks & Compares  first digit of numbers and executes which is bigger
+
+
+/** QUESTION
+ *   How to get the success in console.
+ *   let a2 = prompt("Enter a number?");
+//Don't modify any code below this
+if (a2) {
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+}
+ * */
+ let a2 = prompt("Enter a number?");
+//Don't modify any code below this
+if (parseInt(a2)) {
+ console.log( 'OMG it works for any number inc 0' );
+}
+else
+{
+ console.log( "Success" );
+}
+
+// Reason :
+// 1. First we sholud need to convert string into number
+// 2. Then we an check for Falsely and Truley value
+
+
+
+/** Question
+ * How to get the correct score in console.
+ * let value = prompt('How many runs you scored in this ball');
+if (value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+ * */
+ let value = prompt('How many runs you scored in this ball');
+if (parseInt(value) === 4) {
+      console.log("You hit a Four");
+} else if (parseInt(value) === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+// REASON:
+// 1. Convert incoming value into numbers
+
+
+
+/** QUESTION
+ * Fix the code to welcome the Employee
+ * let login = 'Employee';
+let message = (login == 'Employee') ? :
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
+ * */
+
+ let login = 'Employee';
+let message = (login == 'Employee') ?'Greetings' : 'No login';
+console.log(message);
+
+// REASON:
+// 1. Ternary Opeator used  ..
+
+
+/** QUESTION
+ * Fix the code to welcome the boss
+ * // You cant change the value of the msg
+let message;
+if (null || 2 || undefined )
+{
+ let message = "welcome boss";
+}
+else
+{
+ let message = "Go away";
+}
+  console.log(message);
+ * 
+ * */
+// You cant change the value of the msg
+let message1;
+if (null || 2 || undefined )
+{
+ let message1 = "welcome boss";
+ console.log(message1);
+}
+else
+{
+ let message1 = "Go away";
+ console.log(message1);
+}
+
+
+/** QUESTION
+ *  Fix the code to welcome the boss
+ * let message;
+let lock = 2;
+//Dont change any code below this 
+if (null || lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+  console.log(message);
+ * 
+ * */
+ let message3;
+let lock = 2;
+//Dont change any code below this 
+if (null && lock && undefined )
+{
+  message3 = "Go away";
+}
+else
+{
+ message3 = "welcome Boss🙌";
+}
+  console.log(message3);
+ 
+
+  // REASON:
+  // 1. null, undefined are falsely value
+  // 2. I changed to && operator because if it  satisfy all condition then only its executes
+
+  /** Question
+   * let message;
+let lock = 2;
+//Dont change any code below this
+if (lock && " " || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+console.log(message);
+   * 
+   * */
+
+   let message4;
+let lock1 = null;
+//Dont change any code below this
+if (lock1 && " " || undefined )
+{
+  message4 = "Go away🐱‍🏍";
+}
+else
+{
+ message4 = "welcome✔✔🎉";
+}
+console.log(message4);
+
+//Reason:
+// 1. Value of lock1 is changed to null to unsatisfy the condition
+
+
+/** Question
+ * Change the code to print:
+ * 3
+ * 2
+ * 1
+ * //You can change only 2 characters
+let i = 3;
+while (i) {
+  console.log( --i );
+}
+ * */
+
+ //You can change only 2 characters
+let i = 3;
+while (i) {
+  console.log(i);
+  i--;
+}
+
+//Reason:
+// 1. Pre-increment is taken and incrementis done at end of the stattement
+
+/** QUESTION
+ * Change the code to print 1 to 10 in 4 lines
+ * llet num = 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+num += 1
+console.log(num)
+ * 
+ * */
+ let num = 1;
+ var res = "",res1="",res3="",res4="";
+ var count =0;
+for(let i=num;i<=10;i++){
+  count++;
+  if(count<4){
+   res += i+" ";
+       
+  }
+  else if(count<6){
+    res1 += i+" ";
+  }
+  else if(count<9){
+    res3 += i+" ";
+  }
+  else{
+    res4 += i+" ";
+  }
+ 
+}
+console.log(res);
+  console.log(res1);
+ 
+  console.log(res3);
+  console.log(res4);
+
+  /** output:
+   * 1 2 3 
+   * 4 5 
+   * 6 7 8 
+   * 9 10 
+   * */
+
+
+   /** Question
+    *  Change the code to print all the gifts
+    * let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) {
+  console.log('Wrapped ${'gifts[i]'} and added a bow!');
+}
+    * 
+    * */
+
+    let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) {
+  console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+// Reason:
+// Changed single quotes Template string(interpolation) to concantate 
+
+
+/**  QUESTION
+ * Fix the code to disarm the bomb
+ * let countdown = 100;
+while (countdown > 0) {
+  countdown--;
+  if(countdown == 0)
+  {
+   console.log("bomb triggered");
+  }
+}
+ * 
+ * */
+ let countdown = 100;
+
+ while (countdown > 0) {
+  countdown--;
+  if(countdown == 0)
+  {
+   console.log("bomb dismantled");
+  }
+//   else{
+//     console.log("bomb dismantled");
+  
+// }
+ }
+
+// Reason:
+// Simply we can the value of countdown
+
+/** Question
+ * Whats the msg printed and why? Guess you answer before running it.
+ * var lemein = “0”;
+var lemeout = 0;
+var msg = “”;
+if (lemein) {
+ msg += “hi”;
+ }
+if (lemeout) {
+ msg += ‘Hello’;
+}
+console.log(msg);
+ * */
+ var lemein ="0";
+var lemeout = 0;
+var msg = " ";
+if (lemein) {
+ msg += "Hi";
+ }
+if (lemeout) {
+ msg += "Hello";
+}
+console.log(msg);
+
+// Reason : 0 is an falsely value so it doesnot go to if loop
+// O/p: Hi
+
+
+/** Write a code to print the numbers in the array
+ * Output: 1234567891011
+ * var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string = “”;
+ 
+for (var i = 1; i < 11; i--) {
+ new_string += numsArr[i] 
+}
+console.log(new_string);
+ * 
+ * */
+
+ var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string = "";
+ 
+for (var iv = 0; iv < 11; iv++) {
+ new_string += numsArr[iv] 
+}
+
+console.log(new_string);
+
+
+// REASON:
+// 1. Change to decrement operator to increment operator
+// 2. And Initialize iv to 0 --> so that it will print from "0" index
+
+
+/** Write a code to print the numbers in the array
+Output: 1,2,3,4,5,6,7,8,9,10,11
+ *   var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string = “”;
+ 
+for (var i = 1; i < 11; i++) {
+ new_string += numsArr[i] + , 
+}
+console.log(new_string);
+ * 
+ * */
+
+ var numsArr2 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var new_string2 = "";
+ 
+for (var ia = 0; ia < 11; ia++) {
+ new_string2 += numsArr2[ia] +","; 
+}
+// var lastChar = new_string2.slice(-1);
+// console.log(lastChar);
+ new_string2 = new_string2.slice(0,-1);
+console.log(new_string2);
+
+// REASON:
+//
+// 1. And Initialize iv to 0 --> so that it will print from "0" index
+// 2. use concantenation operation to add comma
+// 3. to remove comma at end of string use slice method  -1(represent reverse of first element)
+
+
+/**
+ * Write a code to print from last to first with spaces (Make sure there is no space after the last element 1)
+         Output: 11 10 9 8 7 6 5 4 3 2 1
+
+         var new_string = “”;
+ 
+for (var i = 11; i > 0; i — ) {
+ new_string += numsArr[i] + “ “ 
+}
+console.log(new_string);
+ * 
+ * */
+
+var new_string3 = "";
+ 
+for (var iq = 11; iq > 0; iq--) {
+ new_string3 += iq+" ";
+}
+new_string3 = new_string3.trim();
+console.log(new_string3);
+
+
+// REASON:
+// 1. In above snippet numsArr is called but we didn't have any array name like this
+// 2. we just passing values in for loop() decrementing and printing as follows..
+// 3. trim() method is used to remove beginning and end spaces in an string
+
+/** Write a code to replace the array value — If the number is even, replace it with ‘even’.
+Output:[ 1, “even”, 3, “even”, 5, “even”, 7, “even”, 9, “even”, … ]
+var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) {
+ if(numsArr[i] %2 == 0 )
+ {
+ numsArr[i] = odd
+ }
+}
+console.log(numsArr);
+
+*/
+var numsArr5 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i5 = 0; i5 <=10; i5++) {
+ if(numsArr5[i5] %2 == 0 )
+ {
+ numsArr5[i5] = "even"
+ }
+}
+console.log(numsArr5);
+
+//Reason: 
+// 1. inside if statement change odd to even
+
+/**  Write a code to replace the array value — If the index is even, replace it with ‘even’.
+ * Output: [ “even”, 2, “even”, 4, “even”, 6, “even”, 8, “even”, 10, … ]
+ * 
+ * var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) {
+ if(numsArr[i] %2 == 0 )
+ {
+ numsArr[i] = even
+ }
+}
+console.log(numsArr);
+ * 
+ * */
+ var numsArr6 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i6 = 0; i6 <=10; i6++) {
+ if(numsArr6[i6] %2 != 0 )
+ {
+ numsArr6[i6] = "even"
+ }
+}
+console.log(numsArr6);
+
+//Reason: 
+// 1. inside if statement change even t odd 
+
+/**  Write a code to add all the numbers in the array
+ * Output: 66
+ * var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+for (var i = 0; i <=10; i++) {
+ var sum;
+ sum += numsArr[i]
+}
+console.log(sum);
+ * 
+ * */
+
+ var numsArr7 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+ var sum7=0;
+for (var i7 = 0; i7 <=10; i7++) {
+ 
+ sum7 += numsArr7[i7]
+}
+console.log(sum7);
+
+//Reason:
+// 1. sum must be initialized to zero
+// 2. And it should be outside of the loop 
+
+
+/** Write a code to add the even numbers only
+ * Output: 30
+ * var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum=0;
+for (var i = 0; i <10; i++) {
+ if(numsArr[i]%2==0);
+ sum += numsArr[i]
+}
+console.log(sum);
+ * 
+ * */
+
+ var numsArr9 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum9=0;
+for (var i9 = 0; i9 <10; i9++) {
+ if(numsArr9[i9]%2==0){
+ sum9 += numsArr9[i9]
+ }
+}
+console.log(sum9);
+
+//Reason:
+// after if statement there is no need to put semicolon
+// if statement should have curly braces .. (Note: For single line statement inside if statement there is no requirement of putting curly braces)
+
+
+
+/**  Write a code to add the even numbers and subract the odd numbers
+Output: 94
+ * 
+ * var numsArr = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum=100;
+for (var i = 0; i <=10; i++) {
+ if(numsArr[i]%2!=0);
+ {
+ sum += numsArr[i]
+ }
+ else
+ {
+ sum -= numsArr[i]
+ }
+}
+console.log(sum);
+ * */
+
+ var numsArr11 = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+var sum11=100;
+for (var i11 = 0; i11 <=10; i11++) {
+ if(numsArr11[i11]%2 == 0)
+ {
+ sum11 = sum11 + numsArr11[i11];
+ }
+ else 
+ {
+ sum11 =sum11 - numsArr11[i11]
+ }
+}
+console.log(sum11);
+
+// Reason :
+// in if statement the condition should be equal to zero
+
+/**  Write a code to print inner arrays
+Output:
+Array(5) [ 1, 2, 3, 4, 5 ]
+Array(6) [ 6, 7, 8, 9, 10, 11 ]
+
+var numsArr = [[1, 2, 3, 4, 5][ 6, 7, 8, 9, 10, 11]];
+for (var i = 0; i < numsArr.length; i++); {
+ console.log( numsArr[i])
+}
+
+ * 
+ * */
+
+ var numsArr22 = [[1, 2, 3, 4, 5],[ 6, 7, 8, 9, 10, 11]];
+ var newArray = [];
+for (var i22 = 0; i22 < numsArr22.length; i22++) {
+  for(var i23=0; i23 <numsArr22[i22].length; i23++){
+    newArray.push(numsArr22[i22][i23]);
+
+  }
+}
+console.log(newArray);
+
+//Reason:
+// 1. Array should be separated by using an comma
+// 2. we should implement another for loop() for inner loop implementation
+
+
+/**
+ * Fix the code to give the below output:
+Expected Output:
+[
+{firstName: “Vasanth”, lastName: “Raja”, age: 24, role: “JSWizard”},
+{firstName: “Sri”, lastName: “Devi”, age: 28, role: “Coder”}
+]
+
+=======================
+
+var array =[[[“firstname”,”vasanth”],[“lastname”,”Raje”],[“age”,24],[“role”,”JSWizard”]],[[“firstname”,”Sri”],[“lastname”,”Devi”],[“age”,28],[“role”, “Coder”]]];
+var final=[]
+while(array.length!=0)
+{
+ var outer_remove = array.shift();
+ 
+ while(outer_remove.length!=0)
+ {
+ var inner_remove = outer_remove.shift()
+ var key = inner_remove[0]
+ var value =inner_remove[1]
+ new_object[key]=value
+ }
+ final.push(new_object)
+}
+ * */
+
+ var arrayf =[[["firstname","vasanth"],["lastname","Raje"],["age",24],["role","JSWizard"]],[["firstname","Sri"],["lastname","Devi"],["age",28],["role", "Coder"]]];
+var finalf=[];
+while(arrayf.length!=0)
+{
+ var outer_remove = arrayf.shift();
+ 
+ while(outer_remove.length!=0)
+ {
+ var inner_remove = outer_remove.shift()
+ var keyf = inner_remove[0];
+ var valuef =inner_remove[1];
+ finalf.push(keyf,valuef);
+ }
+ 
+ 
+}
+console.log(finalf);
+
+
+/**  Fix the code to get the largest of three.
+ * aa = (f,s,t) => {
+ let f,s,t;
+ console.log(f,s,t);
+ if(f>s &&f>t){
+ console.log(f)}
+ else if(s>f && s>t){
+ console.log(s)}
+ else{
+ console.log(t)}
+}
+aa(1,2,3);
+ * 
+ * 
+ * */
+ let f,s,t;
+ var aa = (f,s,t) => {
+ 
+ console.log(f,s,t);
+ if(f>s &&f>t){
+ console.log(f)}
+ else if(s>f && s>t){
+ console.log(s)}
+ else{
+ console.log(t)}
+}
+aa(1,2,3);
+
+//Reason:
+// Declaration of variable sholud be outside the function
+
+/** Fix the code to Sum of the digits present in the number
+ * let n = 123;
+console.log(add(n));
+function add(n)
+{
+let sum = 10;
+for(var i=0;i<n.length;i++){
+ sum+=n[i]
+ }
+ return sum;
+}
+ * 
+ * */
+
+ let n = 123;
+ n = n.toString().split("");
+console.log(add(n));
+function add(n)
+{
+  var sum = 10;
+for(var i=0;i<n.length;i++){
+ sum+=parseInt(n[i]);
+ }
+ return sum;
+} 
+
+//Reason
+// 1. n value to be converted into array element
+// 2. after that we should pass values to array and to convert to integer
+
+
+/**  Fix the code to Sum of all numbers using IIFE function
+ * const arr = [9,8,5,6,4,3,2,1];
+(function() {
+ let sum = 0;
+ for (var i = 0; i <= arr.length; i++);{
+ sum += arr[i];
+ }
+ console.log(sum);
+ return sum;
+})();
+ * 
+ * */
+ const arr = [9,8,5,6,4,3,2,1];
+  let sum = 0;
+(function() {
+
+ for (var i = 0;i<arr.length;i++){
+   console.log(arr[i]);
+ sum += arr[i];
+ }
+ console.log(sum);
+ return sum;
+})();
+
+//REason:
+// 1. condition in for loop should not be equal to length
+// 2. sum variable should be placed outside of an function.
+
+/** Fix the code to gen Title caps.
+ * var arr = [“guvi”, “geek”, “zen”, “fullstack”];
+var ano = function(arro) {
+ for (var i = 0; i <= arro.length; i++) {
+ console.log(arro[i][0].toUpperCase() + arro[i].substr(1));
+ }
+}
+ano();
+ * 
+ * 
+ * */
+
+
+
+var arr2 = ["guvi", "geek", "zen", "fullstack"];
+var ano = function(arro) {
+  console.log(arro);
+ for (var i = 0; i < arro.length; i++) {
+ console.log(arro[i][0].toUpperCase() + arro[i].substring(1));
+ }
+}
+ano(arr2);
+
+// Reason:
+// Condition of for loop() should not be equal to lenght
+
+
+/** Fix the code to sum the number in that array
+ * const num = [10, 20, 30, 40,50,60,70,80,90,100] 
+const sum = (a, b) =>
+ a + b
+const sum = num.reduce(sum)
+console.log(sum);
+ * 
+ * 
+ * */
+
+ const numm = [10, 20, 30, 40,50,60,70,80,90,100] 
+var summ_e = (a, b) =>a + b
+ summ_e = numm.reduce(summ_e,0)
+console.log(summ_e);
+
+//Reason:
+// a value should be initialied with "0" with reduce function
+
+
+/** Fix the code to rotate an array by k times and return rotated array using IIFE function
+ * var arr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+k = arr.length % k;
+(function() {
+ arr = {};
+ out = arr.slice(k + 1, arr.length);
+ var count = out.length;
+ for (var i = 0; i < k + 1; i++) {
+ out[count] = arr[i];
+ count += 1;
+ }
+ console.log(out);})();
+ * 
+ * 
+ * */
+ var arrarr = [1, 2, 3, 6, 8, 6, 1, 9, 10, 12, 13];
+var k = 3;
+k = arrarr.length % k;
+(function() {
+
+var  out = arrarr.slice(k + 1, arrarr.length);
+ var count = out.length;
+ for (var i = 0; i < k + 1; i++) {
+ out[count] = arrarr[i];
+ count += 1;
+ }
+ console.log(out);
+})();
+
+//Reason:
+//   arr = {}; empty object of an arr is removed
+// And variable out should be declared.
+
+
+/** Fix the code to gen Title caps.
+ *  var arr = ["guvi", "geek", "zen", "fullstack"];
+(function() {
+ for (var i = 0; i <= arr.length; i++) {
+ console.log(arr[0][i].toUpperCase() + arr[i].substr(1));
+ }
+})();
+ * 
+ * 
+ * */
+
+ var arrz = ["guvi", "geek", "zen", "fullstack"];
+(function(arrz) {
+ for (var iz = 0; iz < arrz.length; iz++) {
+ console.log(arrz[iz][0].toUpperCase() + arrz[iz].substring(1));
+ }
+})(arrz);
+
+// Reason:
+// Condition of for loop() should not be equal to lenght
+// substring method should be correctly used
+
+
+
+
+
+  </script>
+</body>
+
+</html>
